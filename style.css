@@ -5,18 +5,22 @@
     margin: 0;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: white;
 }
 
 :root {
-    font-size: 12px;
+    font-size: 16px;
+
 }
 
 .container {
     display: flex;
+    padding: 3rem;
+    flex-direction: column;
+    flex: 1;
 }
 
 #mainContainer {
+    display: flex;
     justify-content: flex-end;
     background-image: url("LaboratoryLoginBackgroundPhoto.jpg");
     background-size: 70% 100vh;
@@ -25,6 +29,7 @@
 }
 
 #bodyContainer {
+    display: flex;
     flex-direction: column;
     width: 60%;
     height: 100vh;
@@ -32,25 +37,96 @@
 }
 
 #headerContainer {
-    flex: 1;
+    justify-content: flex-end;
     height: 40vh;
-    background-color: grey;
+    background-color: rgb(230, 230, 230);
+    font-size: 2.5rem;
+    font-style: italic;
 }
 
 #signUpFormContainer {
-    flex: 1;
+    justify-content: center;
+    gap: 2rem;
     height: 30vh;
+}
+
+#signUpFormContainer > div {
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    gap: 3rem;
+    margin-left: 3rem;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input {
+    font-size: 1rem;
 }
 
 #footerContainer {
-    flex: 1;
     height: 30vh;
-    background-color: grey;
+    padding: 5rem;
+    background-color: rgb(230, 230, 230);
+    gap: 3rem;
 }
 
+#footerContainer > div {
+    font-size: 1.2rem;
+}
+
+button {
+    width: 10rem;
+    height: 4rem;
+    font-size: 1rem;
+    background-color: #2793AF;
+    border-radius: 12px;
+}
 
 
 
 logo {
     font-family: 'Alfa Slab One';
 }
+
+a:link {
+    color:rgb(7, 70, 70);
+}
+
+a:visited {
+    color: rgb(51, 5, 49);
+}
+
+input:required:valid {
+    border-color:green; 
+}
+/* This styling makes invalid form entries have a red background only when focus */
+input:focus:required:invalid { 
+    background-color: pink; color: white; border-color: red;
+}
+
+span {
+    
+}
+
+.errorMessage {
+    width  : 100%;
+    padding: 0;
+  
+    font-size: 80%;
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+  
+    box-sizing: border-box;
+  }
+
+  .errorMessage.active {
+    padding: 0.3em;
+  }

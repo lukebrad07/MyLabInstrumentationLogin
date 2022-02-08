@@ -10,18 +10,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container" id="mainContainer">
-        <div class="container" id="bodyContainer">
+    <div id="mainContainer">
+        <div id="bodyContainer">
             <div class="container" id="headerContainer">
-            Text
+                <div id="headerText">
+                Thank you for choosing Braddock Laboratory Services, a leader in innovation
+                </div>
             </div>
 
             <div class="container" id="signUpFormContainer">
-            Text
+                <div>Create a new account</div>
+
+                <form id="createAccountForm" action="example.com/path" method="post" novalidate>
+                
+                    <div class=formContainer>
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <span class="errorMessage"></span>
+
+                        <label for="email">Work Email:</label>
+                        <input type="email" id="email" name="email" placeholder="you@laboratoryhealthsystem.com" required>
+                        <span class="errorMessage"></span>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" 
+                        pattern= "(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        <span id="errorSpan" class="errorMessage"></span>
+                        <!-- Password pattern requires (UpperCase, LowerCase, Number/SpecialChar and min 8 Chars) -->
+
+                    </div>
+                
+                    <div class=formContainer>
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <span class="errorMessage"></span>
+
+                        <label for="employeeID">employeeID:</label>
+                        <input type="number" id="employeeID" name="employeeID" required>
+                        <span class="errorMessage"></span>
+
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" name="passwordConfirm" required>
+                        <span class="errorMessage"></span>
+                    </div>
+
+                </form>
+
             </div>
 
             <div class="container" id="footerContainer">
-            Text
+                <button type="submit" form="createAccountForm" id="createAccountButton">Create Account</button>
+
+                <div>Already have an account? <a href="">Log in</a></div>
             </div>
         </div>
     </div>
